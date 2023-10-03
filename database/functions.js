@@ -64,10 +64,11 @@ async function addTicker(name, symbol, type) {
 }
 
 async function updateTicker(data) {
+    console.log("Update Ticker", data);
     const db = databaseClient.db(dbName);
     const tickerCollection = db.collection(tickerCollectionName);
 
-    const query = { symbol: data.ticker };
+    const query = { symbol: data.symbol };
 
     // Prepare the new or updated document
     const update = {
