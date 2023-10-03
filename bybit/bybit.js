@@ -2,8 +2,8 @@ const crypto = require('crypto');
 const axios = require('axios');
 
 var url = 'https://api-testnet.bybit.com';
-var apiKey = "process.env.BYBIT_API_KEY";
-var secret = "process.env.BYBIT_API_SECRET";
+var apiKey = process.env.BYBIT_API_KEY;
+var secret = process.env.BYBIT_API_SECRET;
 var recvWindow = 40000;
 var timestamp = Date.now().toString();
 
