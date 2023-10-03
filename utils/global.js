@@ -21,7 +21,7 @@ function getStockTickers() {
 function formatUserMessage(position) {
     const timestampSeconds = Math.floor(position.time / 1000);
     const winratePerc = (position.winrate * 100).toFixed(2);
-    const message = `[<t:${timestampSeconds}:T>] ${position.ticker} ${position.type} ${position.side} @${position.price} (${winratePerc}% Winrate)`
+    const message = `[<t:${timestampSeconds}:T>] ${position.symbol} **${position.type}** ${position.side} @${position.price} (${winratePerc}% Winrate)`
     return message;
 }
 
